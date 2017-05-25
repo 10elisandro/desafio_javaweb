@@ -9,8 +9,8 @@ import org.flywaydb.core.Flyway;
 public class Conexao {
 	
 	private static final String url = "jdbc:postgresql://192.168.0.3/projeto_java_web";
-	private static final String usuario = "cresol";
-	private static final String senha = "%%cresol";			
+	private static final String usuario = "javaweb";
+	private static final String senha = "%%soujavero";			
 	private static Connection con = null;
 
 	private static Connection getConnection() throws Exception {

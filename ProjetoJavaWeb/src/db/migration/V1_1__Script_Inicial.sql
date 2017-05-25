@@ -1,8 +1,8 @@
-CREATE TABLE projeto.clientes
+CREATE TABLE produtos
 (
     codigo serial NOT NULL,
-    idtipo integer NOT NULL,
-    nome character varying COLLATE pg_catalog."default",
-    telefone character varying COLLATE pg_catalog."default",
-    CONSTRAINT clientes_pkey PRIMARY KEY (codigo)
+    idcategoria integer NOT NULL,
+    nome character varying COLLATE pg_catalog."default" NOT NULL,
+    descricao character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT produtos_pkey PRIMARY KEY (codigo)
 );

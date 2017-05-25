@@ -8,22 +8,22 @@ import config.Conexao;
 public class DAOProduto {
 
 	public static void incluirProduto(String nome, int categoria, String descricao) throws Exception {
-		String sql = "insert into projeto.produtos(idcategoria, nome, descricao) values(" + categoria + ", '" + nome + "', '" + descricao + "')";
+		String sql = "insert into produtos(idcategoria, nome, descricao) values(" + categoria + ", '" + nome + "', '" + descricao + "')";
 		Conexao.getStatement().executeUpdate(sql);
 	}
 	
 	public static void excluirProduto(int id) throws Exception{
-		String sql = "delete from projeto.produtos where codigo = "+ id;
+		String sql = "delete from produtos where codigo = "+ id;
 		Conexao.getStatement().executeUpdate(sql);
 	}
 	
 	public static void alterarProduto(String descricao, int id) throws Exception {
-		String sql = "update projeto.produtos set descricao = '" + descricao + "' where codigo = "+ id ;
+		String sql = "update produtos set descricao = '" + descricao + "' where codigo = "+ id ;
 		Conexao.getStatement().executeUpdate(sql);		
 	}
 	
 	public static ArrayList<Produto> listarProdutos() throws Exception {
-		String sql = "select * from projeto.produtos";
+		String sql = "select * from produtos";
 		ResultSet rs = Conexao.getStatement().executeQuery(sql);
 		
 		ArrayList<Produto> lista = new ArrayList<Produto>();
@@ -44,7 +44,7 @@ public class DAOProduto {
 	public static  boolean isNomeProdutoValido(String nome, int codigo) throws Exception {
 		boolean valido = false;
 		
-		String sql = "select codigo from projeto.produtos where nome = '" + nome + "' and codigo <> " + codigo;
+		String sql = "select codigo from produtos where nome = '" + nome + "' and codigo <> " + codigo;
 		ResultSet rs = Conexao.getStatement().executeQuery(sql);
 
 		if (!rs.next()) valido = true;
