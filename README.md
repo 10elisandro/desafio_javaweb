@@ -10,7 +10,7 @@
 * Testes automatizados JUnit.
 * SQL para criar seu banco
 ```sql
-CREATE DATABASE projeto_javaweb_desafio
+CREATE DATABASE COLOQUE_NOME_DO_SEU_BANCO
         WITH 
         OWNER = javaweb
         ENCODING = 'UTF8'
@@ -22,9 +22,9 @@ CREATE DATABASE projeto_javaweb_desafio
 * SQL para criar schema e dar permissões ao usuario no banco criado
 ```sql
 CREATE SCHEMA projeto;
-ALTER DATABASE projeto_javaweb_desafio
+ALTER DATABASE COLOQUE_NOME_DO_SEU_BANCO
     SET search_path TO 'projeto';
 
 GRANT ALL ON SCHEMA projeto TO javaweb;
-GRANT ALL ON DATABASE projeto_javaweb_desafio TO javaweb;
+GRANT ALL ON DATABASE COLOQUE_NOME_DO_SEU_BANCO TO javaweb;
 ```
