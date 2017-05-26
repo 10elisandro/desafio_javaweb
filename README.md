@@ -8,7 +8,8 @@
 * Apache Tomcat 7.
 * Banco de Dados PostgreSQL.
 * Testes automatizados JUnit.
-* SQL para criar seu banco
+
+SQL para criar seu banco:
 ```sql
 CREATE DATABASE COLOQUE_NOME_DO_SEU_BANCO
         WITH 
