@@ -20,7 +20,7 @@ CREATE DATABASE COLOQUE_NOME_DO_SEU_BANCO
         TABLESPACE = pg_default
         CONNECTION LIMIT = -1;
 ```    
-* SQL para criar schema e dar permissões ao usuario no banco criado
+SQL para criar schema e dar permissões ao usuário no banco criado:
 ```sql
 CREATE SCHEMA projeto;
 ALTER DATABASE COLOQUE_NOME_DO_SEU_BANCO
